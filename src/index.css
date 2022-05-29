@@ -17,13 +17,11 @@ h1 {
   background-color: brown;
   width: 500px;
   height: 700px;
-  border: solid 2px;
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: 20% 20% 20%;
-  grid-template-rows: 20% 20% 20%;
-  justify-content: center;
-  border-radius: 1rem;  
+  border: solid 2px;  
+  margin: 0 auto;  
+  border-radius: 1rem; 
+  align-items: center;
+  text-align: center;
 }
 
 .drum-pad {
@@ -42,11 +40,21 @@ h1 {
 #display {
   background-color: aquamarine;
   border: solid 2px;
-  height: 20%;
+  height: 20px;
+  width: 50%;
   text-align: center;
   vertical-align: middle;
-  display:flex;
+  display:flex; 
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
+}
+
+#keypad {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  border-radius: 1rem; 
+  margin-bottom: 3rem;
 }
