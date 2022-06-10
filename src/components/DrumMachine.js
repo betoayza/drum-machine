@@ -4,16 +4,17 @@ const DrumMachine = () => {
   const [sound, setSound] = useState(null);
   const [on, setOn] = useState(false);
 
-  const handleClick = (e) => {
-    //console.log(e);
+  const handleClick = async (e) => {
+    console.log(e);
     setSound(e.target.id);
 
-    const audio = document.getElementById(e.target.firstChild.id);
-    audio
+    const audio = document.getElementById(e.target.firstElementChild.id);
+
+    await audio
       .play()
       .then(() => {})
-      .catch((error) => error);
-      //document.getElementById("display").innerText=e.target.id;
+      .catch((error) => error); 
+       
   };
 
   return (
@@ -26,6 +27,7 @@ const DrumMachine = () => {
             id="flexSwitchCheckDefault"
             onChange={() => {
               setOn(!on);
+              setSound(null);
             }}
           />
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
