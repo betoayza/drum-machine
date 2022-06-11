@@ -3,9 +3,10 @@ import React, { useState } from "react";
 const DrumMachine = () => {
   const [sound, setSound] = useState(null);
   const [on, setOn] = useState(false);
-
+  
   const handleClick = async (e) => {
     //console.log(e);
+    console.log("6) https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode#fromHistory");
     setSound(e.target.id);
 
     const audio = document.getElementById(e.target.firstElementChild.id);
