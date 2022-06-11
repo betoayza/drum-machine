@@ -5,7 +5,7 @@ const DrumMachine = () => {
   const [on, setOn] = useState(false);
 
   const handleClick = async (e) => {
-    console.log(e);
+    //console.log(e);
     setSound(e.target.id);
 
     const audio = document.getElementById(e.target.firstElementChild.id);
